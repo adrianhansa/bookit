@@ -1,5 +1,5 @@
 import nc from 'next-connect';
-import { getAllRooms } from '../../../controllers/roomController';
+import { getAllRooms, createRoom } from '../../../controllers/roomController';
 
 const handler = nc();
 
@@ -9,5 +9,6 @@ const someMiddleware = () => {
 
 // handler.use(someMiddleware()).get(getAllRooms);
 handler.get(getAllRooms);
+handler.post(createRoom);
 
 export default handler;

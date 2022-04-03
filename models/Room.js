@@ -8,7 +8,7 @@ const roomSchema = new mongoose.Schema(
       trim: true,
       maxlength: [100, 'The room name cannot exceed 100 characters.'],
     },
-    price: {
+    pricePerNight: {
       type: Number,
       required: [true, 'Please enter the room price.'],
       trim: true,
@@ -34,7 +34,7 @@ const roomSchema = new mongoose.Schema(
     breakfast: { type: Boolean, default: false },
     airConditioned: { type: Boolean, default: false },
     petsAllowed: { type: Boolean, default: false },
-    roomdCleaning: { type: Boolean, default: false },
+    roomCleaning: { type: Boolean, default: false },
     ratings: { type: Number, default: 0 },
     numOfReviews: { type: Number, default: 0 },
     images: [
